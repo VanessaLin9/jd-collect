@@ -1,4 +1,6 @@
 credentials.json
+venv/
+.env
 
 # Python
 __pycache__/
@@ -14,3 +16,4 @@ __pycache__/
 # logs 或暫存
 *.log
 temp/
+record_jobs.json
