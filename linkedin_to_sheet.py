@@ -27,13 +27,12 @@ if platform != "linkedin":
     print("⚠️ 目前只支援 LinkedIn 職缺分享連結")
     exit(1)
 
-# === 解析網址，獲取 currentJobId ===
 query_params = parse_qs(parsed_url.query)
 job_id = query_params.get('currentJobId', [None])[0]
 
 
 if not job_id:
-    print("⚠️ 沒有抓到 currentJobId，請確認網址正確")
+    print("⚠️ Linkedin的網址卻沒有抓到 currentJobId，請確認網址正確")
     exit(1)
 
 share_url = f"https://www.linkedin.com/jobs/view/{job_id}/"
